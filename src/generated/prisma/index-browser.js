@@ -120,13 +120,21 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.ProjectScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.MessageScalarFieldEnum = {
   id: 'id',
   content: 'content',
   role: 'role',
   type: 'type',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  projectId: 'projectId'
 };
 
 exports.Prisma.FragmentScalarFieldEnum = {
@@ -169,6 +177,7 @@ exports.MessageType = exports.$Enums.MessageType = {
 };
 
 exports.Prisma.ModelName = {
+  Project: 'Project',
   Message: 'Message',
   Fragment: 'Fragment'
 };
